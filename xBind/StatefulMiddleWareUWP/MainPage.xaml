@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="StatefulMiddleWareUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StatefulMiddleWareUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel Background="#ff000000">
+            <TextBlock x:Name="Header" Text="{x:Bind ViewModel.Title}" Style="{StaticResource HeaderTextBlockStyle}" Margin="10,60,0,0" Foreground="White"/>
+            <TextBlock x:Name="ProfileCreatorTitle" Text="{x:Bind ViewModel.Lead}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" RelativePanel.Below="Header" Margin="10,10,0,0" Foreground="White"/>
+            <ListBox x:Name="MenuList" SelectionChanged="MenuList_SelectionChanged"
+                        SelectionMode="Single" HorizontalAlignment="Left" VerticalAlignment="Top" RelativePanel.Below="ProfileCreatorTitle" Margin="0,20,0,0" ItemsSource="{x:Bind ViewModel.Menu}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:MenuContext">
+                        <TextBlock Text="{x:Bind Title}" Style="{StaticResource BaseTextBlockStyle}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </RelativePanel>
+    </Grid>
+</Page>
