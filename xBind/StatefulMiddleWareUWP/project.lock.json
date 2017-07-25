@@ -21962,10 +21962,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\tetsu\\Desktop\\Hamburger\\xBind\\StatefulMiddleWareUWP\\StatefulMiddleWareUWP.csproj",
+      "projectUniqueName": "C:\\Source\\UseUWPSamples\\xBind\\StatefulMiddleWareUWP\\StatefulMiddleWareUWP.csproj",
       "projectName": "StatefulMiddleWareUWP",
-      "projectPath": "C:\\Users\\tetsu\\Desktop\\Hamburger\\xBind\\StatefulMiddleWareUWP\\StatefulMiddleWareUWP.csproj",
-      "projectJsonPath": "C:\\Users\\tetsu\\Desktop\\Hamburger\\xBind\\StatefulMiddleWareUWP\\project.json",
+      "projectPath": "C:\\Source\\UseUWPSamples\\xBind\\StatefulMiddleWareUWP\\StatefulMiddleWareUWP.csproj",
+      "projectJsonPath": "C:\\Source\\UseUWPSamples\\xBind\\StatefulMiddleWareUWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

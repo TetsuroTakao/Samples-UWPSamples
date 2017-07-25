@@ -18,6 +18,7 @@ namespace StatefulMiddleWareUWP
         private void MenuList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBox menuListBox = sender as ListBox;
+
         }
     }
 }

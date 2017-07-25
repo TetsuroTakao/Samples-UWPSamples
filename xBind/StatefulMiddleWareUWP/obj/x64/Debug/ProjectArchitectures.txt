@@ -1,0 +1,1 @@
+C:\Source\UseUWPSamples\xBind\StatefulMiddleWareUWP\StatefulMiddleWareUWP.csproj;x64

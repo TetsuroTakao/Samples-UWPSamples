@@ -4,20 +4,22 @@ using Windows.UI.Xaml.Controls;
 
 namespace StatefulMiddleWareUWP
 {
-    public class MenuContext
+    public class MenuItemContext
     {
-        public string Title { get; set; }
-        public Content Body { get; set; }
+        public string PageTitle { get; set; }
+        public string Lead { get; set; }
+        public ContentTypes CurrentType { get; set; }
     }
-    public class Content
+    public class ProfileContent: MenuItemContext
     {
-        public Content()
+        public ProfileContent()
         {
-            ContentType = ContentTypes.Profile;
+            CurrentType = ContentTypes.Profile;
             DistinationType = DistinationTypes.Undefined;
             SyncIds = new List<Tuple<DistinationTypes, string>>();
+            Lead = "Aquiring from SNS or idenity provider";
+            PageTitle = "Create Profile";
         }
-        public ContentTypes ContentType { get; set; }
         public DistinationTypes DistinationType { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
@@ -54,16 +56,13 @@ namespace StatefulMiddleWareUWP
     {
         public MainVM()
         {
-            Menu = new List<MenuContext>();
-            Current = new MenuContext() { Title = "Create Profile", Body = new Content() { } };
+            Menu = new List<MenuItemContext>();
+            Current = new ProfileContent();
             Menu.Add(Current);
-            Title = "Profile creation";
-            Lead = "Aquiring from SNS or idenity provider";
+            AppTitle = "My App";
         }
-        public MenuContext Current { get; set; }
-        public List<MenuContext> Menu { get; set; }
-        public string Title { get; set; }
-        public string Lead { get; set; }
-        public Type ClassType { get; set; }
+        public MenuItemContext Current { get; set; }
+        public List<MenuItemContext> Menu { get; set; }
+        public string AppTitle { get; set; }
     }
 }
